@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="corporate">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regalos de Navidad</title>
+
+    <!-- Tailwind + DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+
+    <!-- Driver.js CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.js.iife.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.css" />
+
+    <style>
+        .fade-in {
+            animation: fadeIn .7s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-base-100">
+
+    <!-- GRID DE REGALOS -->
+    <main id="eventos" class="max-w-6xl mx-auto py-10 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4">
+
+        <!-- REGALO 1 -->
+        <div class="card card-compact bg-base-100 shadow-xl hover:scale-105 transition transform fade-in">
+            <figure>
+                <img src="https://d2cyzdatssrhg7.cloudfront.net/export/sites/default/ets/.content/products/img/00-00089lv.jpg?__locale=es"
+                    alt="Chocolates">
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Alejandro Sanz - ¿Y Ahora Qué?</h2>
+                <div class="card-actions justify-end">
+                    <button id="btnInfo1" class="btn btn-secondary" onclick="evento1.showModal()">Info</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGALO 2 -->
+        <div class="card card-compact bg-base-100 shadow-xl hover:scale-105 transition transform fade-in">
+            <figure>
+                <img src="https://ecientradasprocdn.azureedge.net/image_uploads/attachments/000/018/129/Cadena100-002_400x504.jpg"
+                    alt="Velas">
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">La Noche de CADENA 100</h2>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-secondary" onclick="evento2.showModal()">Info</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGALO 3 -->
+        <div class="card card-compact bg-base-100 shadow-xl hover:scale-105 transition transform fade-in">
+            <figure>
+                <img src="https://ecientradasprocdn.azureedge.net/image_uploads/attachments/000/018/121/CenicientaNav25_400x504.jpg"
+                    alt="Té de lujo">
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Cenicienta, el musical</h2>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-secondary" onclick="evento3.showModal()">Info</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGALO 4 -->
+        <div class="card card-compact bg-base-100 shadow-xl hover:scale-105 transition transform fade-in">
+            <figure>
+                <img src="https://ecientradasprocdn.azureedge.net/image_uploads/attachments/000/015/451/400X504_D32B_ECI_MAD_(1).jpg"
+                    alt="Spa">
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Disney On Ice: Vive tus Sueños</h2>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-secondary" onclick="evento4.showModal()">Info</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGALO 5 -->
+        <div class="card card-compact bg-base-100 shadow-xl hover:scale-105 transition transform fade-in">
+            <figure>
+                <img src="https://ecientradasprocdn.azureedge.net/image_uploads/attachments/000/017/050/DisneyTheExhibition_400x504.jpg"
+                    alt="Decoración">
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Disney: The Exhibition</h2>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-secondary" onclick="evento5.showModal()">Info</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- MODALES DAISYUI -->
+    <dialog id="evento1" class="modal">
+        <form method="dialog" class="modal-box">
+            <h3 class="font-bold text-xl">Alejandro Sanz - ¿Y Ahora Qué?</h3>
+            <p class="py-4">El artista español expande su gira mundial '¿Y Ahora Qué?' tras el éxito rotundo de su paso
+                por México y anuncio en Latinoamérica donde continúa agotando localidades. La gira llegará a España
+                dentro de grandes recintos por todo el país a mediados de 2026.
+                <br />
+                <br />
+                Tras un arranque de gira triunfal en México que consiguió el sold out inmediato. El multipremiado
+                artista español Alejandro Sanz anuncia las fechas confirmadas de su gira mundial '¿Y Ahora Qué?' a su
+                paso por España.
+            </p>
+            <div class="modal-action">
+                <button class="btn">Cerrar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="evento2" class="modal">
+        <form method="dialog" class="modal-box">
+            <h3 class="font-bold text-xl">La Noche de CADENA 100</h3>
+            <p class="py-4">Sabemos que lo estabas esperando: ¡vuelve La Noche de CADENA 100! Nuestro concierto
+                solidario a beneficio de Manos Unidas que se desarrollará el próximo 28 de marzo de 2026 en el Movistar
+                Arena de Madrid. Una noche mágica que tendrá como grandes protagonistas a los artistas de la mejor
+                variedad musical que te iremos descubriendo en las próximas semanas.</p>
+            <div class="modal-action">
+                <button class="btn">Cerrar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="evento3" class="modal">
+        <form method="dialog" class="modal-box">
+            <h3 class="font-bold text-xl">Cenicienta, el musical</h3>
+            <p class="py-4">Cenicienta, el legendario éxito de Broadway, llega por fin a Madrid. Un espectacular musical
+                que redefine el concepto de cuento de hadas.
+                <br />
+                <br />
+                Producido por Stage Entertainment España, artífice de grandes éxitos como El Rey León y Aladdín,
+                Cenicienta nos descubre a una joven valiente y decidida que lucha por un mundo mejor.
+                <br />
+                <br />
+                La partitura, creada en los años 50 por Rodgers & Hammerstein, incluye temas icónicos y es interpretada
+                en directo por una magnífica orquesta reivindicándose como una protagonista más del musical. Su
+                escenografía, que fusiona elementos del teatro tradicional con recursos tecnológicos de última
+                generación, convierte Cenicienta en una propuesta única, mágica e inolvidable y en uno de los grandes
+                eventos culturales de la capital para la próxima temporada.
+                <br />
+                <br />
+                ¡No te pierdas esta impactante experiencia teatral en el Teatro Coliseum de Madrid!
+            </p>
+            <div class="modal-action">
+                <button class="btn">Cerrar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="evento4" class="modal">
+        <form method="dialog" class="modal-box">
+            <h3 class="font-bold text-xl">Disney On Ice: Vive tus Sueños</h3>
+            <p class="py-4">
+                ¡Disney On Ice vuelve a España en 2026 con Vive Tus Sueños! Únete a Mickey y Minnie Mouse en un viaje
+                lleno de magia y descubre que ningún sueño es imposible. Revive las emocionantes historias de Moana,
+                Frozen, Coco, La Bella y la Bestia, y muchas más en un espectáculo deslumbrante de patinaje artístico.
+                Consigue ya tus entradas para los shows del 12 al 15 de febrero en el Movistar Arena de Madrid. ¡Vive la
+                magia sobre hielo en familia!
+                <br />
+                <br />
+                Prepárate para soñar a lo grande con Disney On Ice: Vive Tus Sueños, un espectáculo que trae a la vida
+                las historias más icónicas de Disney con deslumbrantes coreografías sobre hielo. Disfrútalo del 12 al 15
+                de febrero en el Movistar Arena de Madrid.
+                <br />
+                <br />
+                Déjate llevar por la música con Miguel de Coco, acompaña a Rapunzel y Flynn en su aventura llena de luz
+                y descubre el poder de los sueños. Sumérgete en el castillo encantado con La Bella y la Bestia, navega
+                junto a Moana y el valiente Maui en su misión para salvar su hogar, y siente la emoción de Frozen con
+                Anna y Elsa mientras enfrentan el desafío de detener el invierno eterno.
+                <br />
+                <br />
+                Un espectáculo lleno de magia, aventuras y emociones para toda la familia.
+                <br />
+                <br />
+                ¡No te pierdas la oportunidad de vivir esta experiencia única sobre hielo!
+            </p>
+            <div class="modal-action">
+                <button class="btn">Cerrar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="evento5" class="modal">
+        <form method="dialog" class="modal-box">
+            <h3 class="font-bold text-xl">Disney: The Exhibition</h3>
+            <p class="py-4">
+                ¡EL GRAN VIAJE POR LOS 100 AÑOS DE DISNEY HA COMENZADO!
+                <br />
+                <br />
+                Los Archivos de Walt Disney abren sus puertas para invitarte a un viaje inolvidable a través de la
+                historia y la fantasía.
+                <br />
+                <br />
+                Más de 250 tesoros originales te esperan Disney: The Exhibition: obras de arte, vestuario original,
+                decorados y atrezo, objetos únicos y recuerdos que marcaron generaciones. ¡Incluso podrás ver algunas de
+                las auténticas ‘joyas de la corona’ de Disney!
+                <br />
+                <br />
+                Déjate sorprender por nueve galerías llenas de imaginación, donde los clásicos cobran vida —desde
+                Blancanieves y los siete enanitos (1937) hasta Encanto (2021)—, junto a los nuevos favoritos de todos:
+                PIXAR, STAR WAR y MARVEL.
+                <br />
+                <br />
+                Una experiencia mágica para disfrutar en familia, donde pequeños y grandes podrán revivir sus historias
+                favoritas y crear nuevos recuerdos juntos.
+                <br />
+                <br />
+                ¡No te pierdas esta oportunidad única de celebrar el universo Disney en todo su esplendor!
+            </p>
+            <div class="modal-action">
+                <button class="btn">Cerrar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- DRIVER.JS TOUR CON LOCALSTORAGE -->
+    <script type="module">
+        const driver = window.driver.js.driver;
+
+        const tour = driver({
+            showProgress: true,
+            steps: [
+                {
+                    element: "#eventos",
+                    popover: {
+                        title: "Opciones de Regalo 🎁",
+                        description: "Hola bichoooo, aquí verás todas las opciones de regalo disponibles.",
+                        side: "top"
+                    }
+                },
+                {
+                    element: "#btnInfo1",
+                    popover: {
+                        title: "Más Información ℹ️",
+                        description: "Pulsa aquí para ver detalles del regalo."
+                    }
+                },
+                {
+                    // Paso flotante sin elemento
+                    popover: {
+                        title: "Para terminar 🛍️",
+                        description: "Cuando hayas decidido qué regalo quieres, dímelo que yo me encargo de todo!!!!!!.",
+                    }
+                },
+            ]
+        });
+
+        window.addEventListener("load", () => {
+            const tourDone = localStorage.getItem("tourRealizado");
+            if (!tourDone) {
+                setTimeout(() => {
+                    tour.drive();
+                    localStorage.setItem("tourRealizado", "true");
+                }, 500);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
